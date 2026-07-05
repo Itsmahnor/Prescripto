@@ -16,8 +16,11 @@ connectcloudinary()
 // ✅ CORRECT middleware setup
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:5173', // for local frontend
-  credentials: true
+    origin: [
+        'http://localhost:5173',
+        'https://prescripto-red-phi.vercel.app'
+    ],
+    credentials: true
 }))
 
 // ✅ Routes
